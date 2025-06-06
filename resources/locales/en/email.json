@@ -1,0 +1,17 @@
+{
+	"common.auto": "Automated message. Please do not reply!",
+
+	"withdrawal_confirmation.title": "Nami Exchange - Withdrawal confirmation",
+	"withdrawal_confirmation.text_01": "Withdrawal confirmation",
+	"withdrawal_confirmation.text_02": "Someone has just made a withdrawal from your account ({email})",
+	"withdrawal_confirmation.text_03": "Amount: {amount}",
+	"withdrawal_confirmation.text_04": "Withdraw to: {to}",
+	"withdrawal_confirmation.text_time": "Time: {time}",
+	"withdrawal_confirmation.text_06": "Enter this 6-digits to verify that withdrawal",
+	"withdrawal_confirmation.text_07": "If this action isn't yours, please <a href=\"https://auth.bitbattle.io/reset_password\" target=\"_blank\">update your password</a>, check your login devices and contact us immediately at support@nami.exchange.",
+	"footer.bonus": "Trade Anytime Anywhere",
+	"footer.download": "Download Nami Exchange app on the App Store and Google Play.",
+	"footer.contact": "Stay connected!",
+	"footer.policy": "Privacy policy"
+}
+

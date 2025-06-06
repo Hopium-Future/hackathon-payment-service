@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  na3-payment-service:
+    image: na3-payment-service
+    restart: always
+    build: .
+    ports:
+      - '127.0.0.1:${PORT:-3204}:${PORT:-3204}'
+    volumes:
+      - ./.env:/usr/src/app/.env
+      - ../na3-interface:/usr/src/na3-interface # Need clone na3-interface source to inside na3-payment-service
+    networks:
+      - na3_network
+
+networks:
+  na3_network:
+    external: true

@@ -1,0 +1,5 @@
+node_modules/**
+patches/**
+providers/**
+app/Commands/**
+**

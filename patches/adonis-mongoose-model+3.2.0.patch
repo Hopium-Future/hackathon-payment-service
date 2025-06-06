@@ -1,0 +1,38 @@
+diff --git a/node_modules/adonis-mongoose-model/providers/MongooseProvider.js b/node_modules/adonis-mongoose-model/providers/MongooseProvider.js
+index 58999bb..d47c2d4 100644
+--- a/node_modules/adonis-mongoose-model/providers/MongooseProvider.js
++++ b/node_modules/adonis-mongoose-model/providers/MongooseProvider.js
+@@ -83,9 +83,9 @@ class MongooseProvider extends ServiceProvider {
+    * @return {void}
+    */
+   async register () {
+-    this._registerSerializer()
++    // this._registerSerializer()
+     this._registerModel()
+-    this._registerCommands()
++    // this._registerCommands()
+     this._registerMongoose()
+   }
+ 
+@@ -101,7 +101,7 @@ class MongooseProvider extends ServiceProvider {
+      * Register command with ace.
+      */
+     const ace = require('@adonisjs/ace')
+-    ace.addCommand('Adonis/Commands/Make:Mongoose')
++    // ace.addCommand('Adonis/Commands/Make:Mongoose')
+   }
+ }
+ 
+diff --git a/node_modules/adonis-mongoose-model/src/Model/Base.js b/node_modules/adonis-mongoose-model/src/Model/Base.js
+index bb79631..6bb642c 100644
+--- a/node_modules/adonis-mongoose-model/src/Model/Base.js
++++ b/node_modules/adonis-mongoose-model/src/Model/Base.js
+@@ -120,7 +120,7 @@ class BaseModel {
+     options = { options, ...this.schemaOptions }
+ 
+     if (this.timestamps !== false) {
+-      options.timestamps = { createdAt: 'created_at', updatedAt: 'updated_at' }
++      options.timestamps = { createdAt: 'createdAt', updatedAt: 'updatedAt' }
+     }
+ 
+     this._schema = new Schema(this._getRawSchema(), options)

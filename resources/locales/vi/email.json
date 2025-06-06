@@ -1,0 +1,16 @@
+{
+	"common.auto": "Đây là thư tự động, vui lòng không trả lời email này.",
+
+	"withdrawal_confirmation.title": "Nami Exchange - Xác thực lệnh rút",
+	"withdrawal_confirmation.text_01": "Xác thực lệnh rút",
+	"withdrawal_confirmation.text_02": "Bạn hoặc ai đó đã thực hiện lệnh rút trên tài khoản của bạn ({email})",
+	"withdrawal_confirmation.text_03": "Số lượng: {amount}",
+	"withdrawal_confirmation.text_04": "Rút tới: {to}",
+	"withdrawal_confirmation.text_time": "Thời gian: {time}",
+	"withdrawal_confirmation.text_06": "Nhập 6 chữ số sau để xác thực lệnh rút",
+	"withdrawal_confirmation.text_07": "Nếu hành động này không phải của bạn, vui lòng <a href=\"https://auth.bitbattle.io/reset_password\" target=\"_blank\">thay đổi mật khẩu</a>, kiểm tra các thiết bị đăng nhập và thông tin tới Nami tại support@nami.exchange.",
+	"footer.bonus": "Giao dịch mọi lúc mọi nơi",
+	"footer.download": "Tải ngay ứng dụng của chúng tôi trên App Store và Google Play.",
+	"footer.contact": "Liên hệ",
+	"footer.policy": "Chính sách bảo mật"
+}

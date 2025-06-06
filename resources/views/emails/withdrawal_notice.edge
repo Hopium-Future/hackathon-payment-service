@@ -1,0 +1,24 @@
+@layout('layouts/email')
+@section('content')
+<table cellpadding="0" cellspacing="0" class="content-container">
+	<tr>
+		<td class="content">
+			<div>
+				<h1 class="title" style="font-size: 1.125rem;font-weight: 600;color: #223050;margin-bottom: 2rem;">
+					Withdrawal Notice
+				</h1>
+				<br />
+				<div style="text-align: left">
+					There has been a request to withdraw a total of <strong>{{amount}} {{currency}}</strong> to an address of <strong>{{address}}</strong>.<br><br>
+                    If this activity is not your own operation, please contact us immediately.<br>
+                    - Telegram: https://t.me/namitradevn <br>
+                    - English Telegram: https://t.me/namitrade<br><br>
+                    Automated message. Please do not reply!
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+@endsection
+

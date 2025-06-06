@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Nami.exchange</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap');
+		body {
+			margin: 0 auto;
+			max-width: 500px !important;
+		}
+
+		h1 {
+		    color: '#1e1e1e';
+		    font-size: '18px';
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Manrope', sans-serif;
+			line-height: 20px;
+			font-size: 14px;
+			color: "#1e1e1e";
+			font-weight: normal;
+
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.header-container {
+			width: 100%;
+			text-align: left;
+			background-image: url("https://auth.nami.io/imgs/email/email-banner.png");
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			padding: 16px 16px 24px;
+		}
+
+		.slogan {
+			text-align: right;
+			border-top: solid transparent 32px;
+			color: #fff;
+			white-space: break-spaces;
+		}
+
+		.slogan-text {
+			font-size: 20px;
+			font-weight: 600;
+			white-space: nowrap;
+		}
+
+		.content-container {
+			width: 100%;
+			text-align: left;
+			background-color: #fff;
+			padding: 32px 16px 68px;
+		}
+
+		.content-container th, .content-container td , .content-container li {
+			color: #1e1e1e;
+		}
+
+		.title-primary {
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 600;
+			padding-bottom: 24px;
+		}
+
+		.list-info {
+			/* top right bottom left */
+			padding: 16px 16px 16px 16px;
+		}
+
+		.row-otp-code {
+			text-align: center;
+			padding: 24px 0;
+		}
+
+		.otp-code {
+			border-radius: 12px;
+			background-color: #f2f4f5;
+			text-align: center;
+			padding: 16px 0;
+			color: #30bf73;
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 26px;
+		}
+
+		.footer-container {
+			width: 100%;
+			text-align: center;
+			background-color: #f2f4f5;
+			padding: 24px 16px 16px;
+			border-spacing: unset;
+		}
+
+		.title-secondary {
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 600;
+			color: #1e1e1e;
+		}
+
+		.helper-text {
+			color: #768394;
+			padding: 16px 0;
+			font-weight: 600;
+		}
+
+		.download-apple {
+			width: 106px;
+			height: 32px;
+			margin-right: 8px;
+			cursor: pointer;
+		}
+
+		.download-chPlay {
+			width: 106px;
+			height: 32px;
+			cursor: pointer;
+		}
+
+		.divider {
+			padding-top: 32px;
+			border-bottom: 1px solid #dcdfe6;
+		}
+
+		.txt-social {
+			color: #1e1e1e !important;
+			font-weight: 600;
+			padding: 24px 0 12px;
+		}
+
+		.icon-social {
+			cursor: pointer;
+			margin-right: 8px;
+		}
+
+		.group-links {
+			text-align: center;
+		}
+
+		.link-support span {
+			color: #30bf73 !important;
+			cursor: pointer;
+			padding: 16px 0px;
+			margin-right: 16px;
+			white-space: nowrap;
+			border: none;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+		@media screen and (min-width: 360px) {
+			.header-container {
+				padding: 32px 32px 38px;
+			}
+
+			.slogan {
+				border-top: solid transparent 16px;
+				white-space: nowrap;
+			}
+
+			.content-container {
+				padding: 32px 32 48px;
+			}
+
+			.title-primary {
+				font-size: 18px;
+				line-height: 26px;
+				padding-bottom: 32px;
+			}
+
+			.list-info {
+				padding: 24px 16px 24px 32px;
+			}
+
+			.row-otp-code {
+				padding: 28px 0 30px;
+			}
+
+			.footer-container {
+				background-color: #f2f4f5;
+				padding: 32px 32px 20px;
+			}
+
+			.title-secondary {
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+			.helper-text {
+				padding: 8px 0 20px;
+			}
+
+			.download-apple {
+				width: 118px;
+				height: 40px;
+				margin-right: 12px;
+			}
+
+			.download-chPlay {
+				width: 135px;
+				height: 40px;
+			}
+
+			.txt-social {
+				padding: 28px 0 12px;
+			}
+		}
+
+		@media screen and (max-width: 360px) {
+			.group-links {
+				text-align: left;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Header -->
+	<table class="header-container" cellpadding="0" cellspacing="0">
+		<tr>
+			<th>
+				<img width="auto" height="24" src="https://auth.nami.io/imgs/email/nami-logo-2.png"/>
+			</th>
+		</tr>
+		<tr>
+			<td class="slogan">
+				<span class="slogan-text">Change mindset</span>
+				<span class="slogan-text">Make giant steps</span>
+			</td>
+		</tr>
+	</table>
+
+	<!-- Content -->
+	@!section('content')
+
+	<!-- Footer -->
+	<table class="footer-container">
+		<tr>
+			<th class="title-secondary">
+				{{{ antl.formatMessage('email.footer.bonus') }}}
+			</th>
+		</tr>
+		<tr>
+			<td class="helper-text">
+				{{{ antl.formatMessage('email.footer.download') }}}
+			</td>
+		</tr>
+		<tr>
+			<td style="clear: both;">
+				<!-- Button download App store -->
+				<a href="https://apps.apple.com/app/id1480302334" target="_blank">
+					<img class="download-apple" width="auto" src="https://auth.nami.io/imgs/email/Appstore_icon_v2.png"/>
+				</a>
+				<a href="https://play.google.com/store/apps/details?id=com.namicorp.exchange" target="_blank">
+					<img class="download-chPlay" width="auto" src="https://auth.nami.io/imgs/email/Google_play_icon_v2.png"/>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="divider">
+			</td>
+		</tr>
+		<tr>
+			<td class="txt-social">
+				{{{ antl.formatMessage('email.footer.contact') }}}
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://www.facebook.com/namifutures" target="_blank">
+					<img class="icon-social" width="auto" height="24" src="https://auth.nami.io/imgs/email/Facebook_icon_v2.png"/>
+				</a>
+				<a href="https://twitter.com/NamiTrade" target="_blank">
+					<img class="icon-social" width="auto" height="24" src="https://auth.nami.io/imgs/email/Twitter_icon_v2.png"/>
+				</a>
+				<a href="https://t.me/namitradevn" target="_blank">
+					<img class="icon-social" width="auto" height="24" src="https://auth.nami.io/imgs/email/Telegram_icon_v2.png"/>
+				</a>
+				<a href="https://www.coingecko.com/en/coins/nami-corporation-token" target="_blank">
+					<img class="icon-social" width="auto" height="24" src="https://auth.nami.io/imgs/email/coingecko_icon_v2.png"/>
+				</a>
+				<a href="https://www.reddit.com/r/NAMIcoin/" target="_blank">
+					<img class="icon-social" width="auto" height="24" src="https://auth.nami.io/imgs/email/Reddit_icon_v2.png"/>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="group-links">
+				<a href="https://nami.exchange/" target="_blank" class="link-support">
+					<span>nami.exchange</span>
+				</a>
+				<a href='mailto:support@nami.io' class="link-support">
+					<span>
+						support@nami.io
+					</span>
+				</a>
+				<a href="https://nami.exchange/terms-of-service" target="_blank" style="margin-right: 0px;" class="link-support" >
+					<span>
+						{{{ antl.formatMessage('email.footer.policy') }}}
+					</span>
+				</a>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

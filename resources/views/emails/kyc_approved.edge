@@ -1,0 +1,34 @@
+@layout('layouts/email')
+@section('content')
+<table cellpadding="0" cellspacing="0" class="content-container">
+	<tr>
+		<td class="content">
+			<div>
+				<h1 class="title" style="font-size: 1.125rem;font-weight: 600;color: #223050;margin-bottom: 2rem;">
+					{{{ antl.formatMessage('notification.email_kyc_approved_title') }}}
+				</h1>
+				<br />
+				<div style="text-align: left">
+                    <p> {{{ antl.formatMessage('notification.email_kyc_rejected_01', {name}) }}}</p>
+                    <p> {{ antl.formatMessage('notification.email_kyc_approved_01') }}</p>
+                    <p> {{ antl.formatMessage('notification.email_kyc_approved_02') }}</p>
+                    <ul>
+                        <li>{{{ antl.formatMessage('notification.email_kyc_04') }}}</li>
+                        <li>{{{ antl.formatMessage('notification.email_kyc_05') }}}</li>
+                        <li>{{{ antl.formatMessage('notification.email_kyc_06') }}}</li>
+                    </ul>
+                </div>
+                <br />
+                <div style="text-align: left">
+                    <p>
+                        {{{ antl.formatMessage('notification.email_kyc_common_footer_01') }}}<br>
+                    </p>
+                </div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+@endsection
+
+

@@ -1,0 +1,11 @@
+module.exports = {
+    TRANSFER: 'TRANSFER',
+    PROMOTION: 'PROMOTION',
+    DEFAULT: 'DEFAULT',
+    SPOT: 'SPOT',
+    SWAP: 'SWAP',
+    WITHDRAW: 'WITHDRAW',
+    DEPOSIT: 'DEPOSIT',
+    COMMISSION: 'COMMISSION',
+    STAKE: 'STAKE',
+}

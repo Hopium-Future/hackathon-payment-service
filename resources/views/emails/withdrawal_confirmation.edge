@@ -1,0 +1,45 @@
+@layout('layouts/email')
+@section('content')
+<table cellpadding="0" cellspacing="0" class="content-container">
+	<tr>
+		<td class="content">
+			<div>
+				<h1 class="title" style="font-size: 1.125rem;font-weight: 600;color: #223050;margin-bottom: 2rem;">
+                    {{{ antl.formatMessage('email.withdrawal_confirmation.text_01') }}}
+                </h1>
+                <br />
+                <div style="text-align: left">
+                    <p>
+                        {{ antl.formatMessage('email.withdrawal_confirmation.text_02', {email}) }}
+                    </p>
+                    <ul>
+                        <li>{{{ antl.formatMessage('email.withdrawal_confirmation.text_03', {amount}) }}}</li>
+                        <li>{{{ antl.formatMessage('email.withdrawal_confirmation.text_04', {to}) }}}</li>
+                        <li>{{{ antl.formatMessage('email.withdrawal_confirmation.text_time', {time}) }}}</li>
+                    </ul>
+                </div>
+                <br />
+                <tr>
+                    {{{ antl.formatMessage('email.withdrawal_confirmation.text_06') }}}
+                </tr>
+                <tr>
+                    <td class="row-otp-code">
+                        <div class="otp-code">{{code}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{{ antl.formatMessage('email.withdrawal_confirmation.text_07') }}}<br>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                         {{{ antl.formatMessage('email.common.auto') }}}<br>
+                    </td>
+                </tr>
+			</div>
+		</td>
+	</tr>
+</table>
+
+@endsection

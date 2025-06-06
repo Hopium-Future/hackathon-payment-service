@@ -1,0 +1,55 @@
+diff --git a/node_modules/winston-elasticsearch/bulk_writer.js b/node_modules/winston-elasticsearch/bulk_writer.js
+index 79cf435..f17d0e6 100644
+--- a/node_modules/winston-elasticsearch/bulk_writer.js
++++ b/node_modules/winston-elasticsearch/bulk_writer.js
+@@ -99,7 +99,8 @@ BulkWriter.prototype.write = function write(body) {
+         if (item.index && item.index.error) {
+           // eslint-disable-next-line no-console
+           console.error('Elasticsearch index error', item.index);
+-          throw new Error('TEST');
++          sysNoti('Loi Elasticsearch index error')
++          // throw new Error('TEST');
+         }
+       });
+     }
+@@ -214,3 +215,40 @@ BulkWriter.prototype.ensureMappingTemplate = function ensureMappingTemplate(fulf
+ };
+ 
+ module.exports = BulkWriter;
++
++
++const slackNotiUrl = process.env.NOTIFY_SLACK_URL || null;
++let lastTimeNotifiedToSlack = 0;
++function sysNoti(err) {
++  try {
++    if (slackNotiUrl && Date.now() - lastTimeNotifiedToSlack > 30000) {
++      const https = require('https');
++      const url = require('url');
++
++      const slackUrl = url.parse(slackNotiUrl);
++      let errString;
++      if (typeof err === 'string') {
++        errString = err;
++      } else {
++        errString = err.message;
++      }
++      const postData = JSON.stringify({"text": `Lỗi winston bulk writer: ${errString || '(unknown error)'}`});
++      const options = {
++        hostname: slackUrl.hostname,
++        path: slackUrl.path,
++        method: 'POST',
++        headers: {
++          'Content-Type': 'application/json',
++          'Content-Length': Buffer.byteLength(postData),
++        }
++      }
++      const req = https.request(options);
++      req.write(postData);
++      req.end();
++      lastTimeNotifiedToSlack = Date.now();
++    }
++  } catch (ignored) {
++    console.error(ignored);
++  }
++}
++
